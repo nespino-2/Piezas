@@ -19,31 +19,10 @@ TEST(PiezasTest, sanityCheck)
 	ASSERT_TRUE(true);
 }
 
-TEST(PiezasTest, NumberOfRows)
+TEST(PiezasTest, FrstTurnXatZeroZero)
 {
   Piezas game = Piezas();
-  int actualRow = (int)game.board.size();
-	ASSERT_EQ(3, actualRows);
-}
-
-TEST(PiezasTest, NumberOfColumsRow1)
-{
-  Piezas game = Piezas();
-  int actualColsR1 = (int)game.board[0].size();
-	ASSERT_EQ(4, actualColsR1);
-}
-
-TEST(PiezasTest, NumberOfColumsRow2)
-{
-  Piezas game = Piezas();
-  int actualColsR2 = (int)game.board[1].size();
-	ASSERT_EQ(4, actualColsR2);
-}
-
-
-TEST(PiezasTest, NumberOfColumsRow3)
-{
-  Piezas game = Piezas();
-  int actualColsR3 = (int)game.board[2].size();
-	ASSERT_EQ(4, actualColsR3);
+  game.dropPiece(0);
+  Piece current = game.pieceAt(0,0);
+	ASSERT_EQ(current,'X');
 }

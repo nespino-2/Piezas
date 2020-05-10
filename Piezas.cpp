@@ -28,8 +28,9 @@ using std::string;
 
 Piezas::Piezas()
 {
+    turn = X;
     board.resize(BOARD_ROWS);
-    for (int i=(int)board.size()-1;i>=1;i--) {
+    for (int i=(int)board.size()-1;i>=0;i--) {
       board[i].resize(BOARD_COLS);
     }
     cout << "Player X it is your turn first: " << endl;
@@ -41,6 +42,13 @@ Piezas::Piezas()
 **/
 void Piezas::reset()
 {
+
+  for (int i=(int)board.size()-1;i>=0;i--) {
+    for (int j=0;j<(int)board[i].size();i++) {
+        board[i][j] = Blank;
+    }
+  }
+
 }
 
 /**
@@ -53,7 +61,28 @@ void Piezas::reset()
 **/
 Piece Piezas::dropPiece(int column)
 {
-    return Blank;
+    Piece current = turn;
+    for (int i=(int)board.size()-1;i>=0;i--) {
+      if ( (board[i][column] != X) || (board[i][column] != O) ) {
+        board[i][column] = turn;
+      }
+      else {
+          if (turn = X) {
+            turn = O;
+          }
+          else {
+            turn = X;
+          }
+          return Blank;
+      }
+    }
+    if (turn = X) {
+      turn = O;
+    }
+    else {
+      turn = X;
+    }
+    return current;
 }
 
 /**
@@ -62,7 +91,7 @@ Piece Piezas::dropPiece(int column)
 **/
 Piece Piezas::pieceAt(int row, int column)
 {
-    return Blank;
+    return board[row][column];
 }
 
 /**
