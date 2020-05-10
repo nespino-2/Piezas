@@ -67,7 +67,7 @@ Piece Piezas::dropPiece(int column)
         board[i][column] = turn;
       }
       else {
-          if (turn = X) {
+          if (turn == X) {
             turn = O;
           }
           else {
@@ -76,7 +76,7 @@ Piece Piezas::dropPiece(int column)
           return Blank;
       }
     }
-    if (turn = X) {
+    if (turn == X) {
       turn = O;
     }
     else {
