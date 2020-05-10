@@ -26,3 +26,24 @@ TEST(PiezasTest, FrstTurnXatZeroZero)
   Piece current = game.pieceAt(0,0);
 	ASSERT_EQ(current,'X');
 }
+
+TEST(PiezasTest, MaxFillColumn1)
+{
+  Piezas game = Piezas();
+  game.dropPiece(0);
+  game.dropPiece(0);
+  game.dropPiece(0);
+  Piece current = game.pieceAt(1,0);
+	ASSERT_EQ(current,'X');
+}
+
+TEST(PiezasTest, OverFillColumn1)
+{
+  Piezas game = Piezas();
+  game.dropPiece(0);
+  game.dropPiece(0);
+  game.dropPiece(0);
+  game.dropPiece(0);
+  Piece current = game.dropPiece(0);
+	ASSERT_EQ(current,' ');
+}

@@ -33,6 +33,13 @@ Piezas::Piezas()
     for (int i=(int)board.size()-1;i>=0;i--) {
       board[i].resize(BOARD_COLS);
     }
+
+    for (int i=(int)board.size()-1;i>=0;i--) {
+      for (int j=0;j<(int)board[i].size();j++) {
+          board[i][j] = Blank;
+      }
+    }
+    cout << " constructor (2,0) is " << (char)board[2][0] << endl;
     cout << "Player X it is your turn first: " << endl;
 }
 
@@ -42,13 +49,11 @@ Piezas::Piezas()
 **/
 void Piezas::reset()
 {
-
   for (int i=(int)board.size()-1;i>=0;i--) {
-    for (int j=0;j<(int)board[i].size();i++) {
+    for (int j=0;j<(int)board[i].size();j++) {
         board[i][j] = Blank;
     }
   }
-
 }
 
 /**
@@ -61,7 +66,12 @@ void Piezas::reset()
 **/
 Piece Piezas::dropPiece(int column)
 {
-    Piece current = turn;
+  Piece current = turn;
+  if( (column > 3) || (column < 0) ) {
+    return Invalid;
+  }
+
+
     for (int i=(int)board.size()-1;i>=0;i--) {
       if ( (board[i][column] != X) || (board[i][column] != O) ) {
         board[i][column] = turn;
