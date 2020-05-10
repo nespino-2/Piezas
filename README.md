@@ -1,3 +1,8 @@
+[![Build Status](https://travis-ci.org/ChicoState/WildcatMobileOrder.svg?branch=master)](https://travis-ci.org/ChicoState/WildcatMobileOrder)
+
+[![Coverage Status](https://coveralls.io/repos/github/nespino-2/Piezas/badge.svg?branch=master)](https://coveralls.io/github/nespino-2/Piezas?branch=master)
+
+
 # Piezas
 
 ## Associated Enumerated Types
