@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/ChicoState/WildcatMobileOrder.svg?branch=master)](https://travis-ci.org/ChicoState/WildcatMobileOrder) [![Coverage Status](https://coveralls.io/repos/github/nespino-2/Piezas/badge.svg?branch=master)](https://coveralls.io/github/nespino-2/Piezas?branch=master)
+[![Build Status](https://travis-ci.org/nespino-2/Piezas.svg?branch=master)](https://travis-ci.org/nespino-2/Piezas) [![Coverage Status](https://coveralls.io/repos/github/nespino-2/Piezas/badge.svg?branch=master)](https://coveralls.io/github/nespino-2/Piezas?branch=master)
 
 # Piezas
 
