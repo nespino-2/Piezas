@@ -1,13 +1,17 @@
 #include "Piezas.h"
 #include <vector>
-#include<string>
-/** CLASS Piezas
- * Class for representing a Piezas vertical board, which is roughly based
- * on the game "Connect Four" where pieces are placed in a column and
- * fall to the bottom of the column, or on top of other pieces already in
- * that column. For an illustration of the board, see:
- *  https://en.wikipedia.org/wiki/Connect_Four
- *
+#include <string>
+#include<iostream>
+
+using std::vector;
+using std::cin;
+using std::cout;
+using std::endl;
+using std::cerr;
+using std::string;
+
+
+/*
  * Board coordinates [row,col] should match with:
  * [2,0][2,1][2,2][2,3]
  * [1,0][1,1][1,2][1,3]
@@ -21,10 +25,14 @@
  * Constructor sets an empty board (default 3 rows, 4 columns) and
  * specifies it is X's turn first
 **/
+
 Piezas::Piezas()
 {
-  	vector< vector<string> > board;
-    board.resize(3);
+    board.resize(BOARD_ROWS);
+    for (int i=(int)board.size()-1;i>=1;i--) {
+      board[i].resize(BOARD_COLS);
+    }
+    cout << "Player X it is your turn first: " << endl;
 }
 
 /**
