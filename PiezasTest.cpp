@@ -41,7 +41,7 @@ TEST(PiezasTest, NumberOfColumsRow2)
 }
 
 
-TEST(PiezasTest, NumberOfColumsRow2)
+TEST(PiezasTest, NumberOfColumsRow3)
 {
   Piezas game = Piezas();
   int actualColsR3 = (int)game.board[2].size();
