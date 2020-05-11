@@ -37,15 +37,11 @@ TEST(PiezasTest, MaxFillColumn1)
 	ASSERT_EQ(current,'X');
 }
 
-TEST(PiezasTest, OverFillColumn1)
+TEST(PiezasTest, CheckInvalid)
 {
   Piezas game = Piezas();
-  game.dropPiece(0);
-  game.dropPiece(0);
-  game.dropPiece(0);
-  game.dropPiece(0);
-  Piece current = game.dropPiece(0);
-	ASSERT_EQ(current,' ');
+  Piece chkInvalid = game.dropPiece(4);
+	ASSERT_EQ(chkInvalid,'?');
 }
 
 TEST(PiezasTest, CheckColumn1)

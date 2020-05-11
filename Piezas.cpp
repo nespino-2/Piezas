@@ -71,7 +71,6 @@ Piece Piezas::dropPiece(int column)
     return Invalid;
   }
 
-
     for (int i=(int)board.size()-1;i>=0;i--) {
       if ( (board[i][column] != X) || (board[i][column] != O) ) {
         board[i][column] = turn;
@@ -86,6 +85,7 @@ Piece Piezas::dropPiece(int column)
           return Blank;
       }
     }
+
     if (turn == X) {
       turn = O;
     }
