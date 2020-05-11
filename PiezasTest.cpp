@@ -47,3 +47,23 @@ TEST(PiezasTest, OverFillColumn1)
   Piece current = game.dropPiece(0);
 	ASSERT_EQ(current,' ');
 }
+
+TEST(PiezasTest, CheckColumn1)
+{
+  Piezas game = Piezas();
+  game.dropPiece(0);
+  game.dropPiece(0);
+  game.dropPiece(0);
+  Piece current = game.pieceAt(2,0);
+	ASSERT_EQ(current,'X');
+}
+
+TEST(PiezasTest, CheckReset)
+{
+  Piezas game = Piezas();
+  game.dropPiece(2);
+  game.dropPiece(2);
+  game.reset(0);
+  Piece current = game.dropPiece(0);
+	ASSERT_EQ(current,' ');
+}
