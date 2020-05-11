@@ -63,7 +63,7 @@ TEST(PiezasTest, CheckReset)
   Piezas game = Piezas();
   game.dropPiece(2);
   game.dropPiece(2);
-  game.reset(0);
-  Piece current = game.dropPiece(0);
+  game.reset();
+  Piece current = game.pieceAt(1,2);
 	ASSERT_EQ(current,' ');
 }
